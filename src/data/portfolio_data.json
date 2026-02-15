@@ -1,0 +1,315 @@
+{
+  "metadata": {
+    "total_story_points": 822,
+    "total_tasks": 451
+  },
+  "profile": {
+    "role": "AI & Frontend Architecture",
+    "summary": "Strategic Software Engineer with 10+ years of experience modernizing large-scale platforms for global financial leaders. Expert in frontend platform engineering, micro-frontend architectures, and AI-driven infrastructure.",
+    "key_achievement": "Architected a hybrid micro-frontend bridge using Module Federation to seamlessly embed Vue 3 components into a legacy .NET/Ember.js monolith.",
+    "education": "B.S. in Systems Engineering, Universidad del Valle (Honors)",
+    "certifications": [
+      "NVIDIA-Certified Associate Generative AI LLMs",
+      "AWS Cloud Practitioner"
+    ]
+  },
+  "skills_hierarchy": [
+    {
+      "skill": "Vue.js / Frontend Architecture",
+      "total_points": 218,
+      "projects": [
+        "Asset Allocation Chart",
+        "Income Secure 2.0 FE",
+        "Create nova"
+      ],
+      "highlights": [
+        {
+          "Issue key": "CW-6276",
+          "summary": "[CSS] Related Insights autopopulating feature not working",
+          "points": 5
+        },
+        {
+          "Issue key": "CW-3752",
+          "summary": "Create the Scroll Jacking component in Earendel",
+          "points": 5
+        },
+        {
+          "Issue key": "WPMA-8015",
+          "summary": "[Ember Part: Data Layer] Income Secure 2.0 FE: Risk and Investment Level Component -[Employer Plan Asset Class Button]",
+          "points": 5
+        },
+        {
+          "Issue key": "WPMA-9139",
+          "summary": "[Data Surface] Tie Overall Accounts & Outside Accounts Data to UI ",
+          "points": 5
+        },
+        {
+          "Issue key": "WPMA-6776",
+          "summary": " L08 Error is not showing on error page in UI login",
+          "points": 5
+        }
+      ],
+      "count": 108,
+      "description": "Architected the frontend for Morningstar\u2019s primary corporate web properties. Expert in Vue 3, Pinia, and Module Federation to bridge legacy systems."
+    },
+    {
+      "skill": "AI Engineering & LLMs",
+      "total_points": 43,
+      "projects": [
+        "RM User Engagement Analytics",
+        "Modal Remains Open on off",
+        "[AI] DISCOVERY"
+      ],
+      "highlights": [
+        {
+          "Issue key": "CW-4658",
+          "summary": "Feed the AI all of the production \u201cResearch Paper\u201d entry pdfs",
+          "points": 8
+        },
+        {
+          "Issue key": "CW-4470",
+          "summary": "[AI] DISCOVERY - Crawler exploration (gpt-crawler)",
+          "points": 5
+        },
+        {
+          "Issue key": "CW-4811",
+          "summary": "AI Crawler enhancements",
+          "points": 5
+        },
+        {
+          "Issue key": "WPMA-2650",
+          "summary": "BD Page White Labeling for Retail IRA",
+          "points": 3
+        },
+        {
+          "Issue key": "CW-5948",
+          "summary": "Signature Methodology Page Is Failing With A 500 Error",
+          "points": 3
+        }
+      ],
+      "count": 17,
+      "description": "NVIDIA-certified in GenAI. Building AI-driven infrastructure using Python, FastAPI, and AWS. Improving system efficiency through data-driven automation."
+    },
+    {
+      "skill": "Cloud Systems & DevOps",
+      "total_points": 17,
+      "projects": [
+        "Additional Data Point",
+        "Income Secure"
+      ],
+      "highlights": [
+        {
+          "Issue key": "CW-5672",
+          "summary": "Create redirect inside the lambda@edge (marketing-edge) in the origin-request-url-routing lambda function",
+          "points": 5
+        },
+        {
+          "Issue key": "CW-4493",
+          "summary": "Set up crawler infrastrcuture in AWS",
+          "points": 5
+        },
+        {
+          "Issue key": "CW-4615",
+          "summary": "[Discovery] How to deploy a lambda triggered on S3 expiration event that deletes an IEP corpus doc",
+          "points": 3
+        },
+        {
+          "Issue key": "CW-4614",
+          "summary": "Implement expiration for items in the final S3 bucket that is 1.5x the crawler interval\u00a0",
+          "points": 3
+        },
+        {
+          "Issue key": "CW-4324",
+          "summary": "[New relic] Get New Relic 'browser' module + Fathom fully working in Earendel and Iridium",
+          "points": 1
+        }
+      ],
+      "count": 7,
+      "description": "Managed large-scale deployments on AWS (Fargate, S3, Lambda). Established CI/CD pipelines with Harness and Jenkins for 2M+ monthly active users."
+    },
+    {
+      "skill": "Backend & API Design",
+      "total_points": 25,
+      "projects": [],
+      "highlights": [
+        {
+          "Issue key": "CW-3284",
+          "summary": "[EARENDEL] Integration API Data with Eloqua Forms",
+          "points": 13
+        },
+        {
+          "Issue key": "CW-5727",
+          "summary": "[Showcase Block] Add fallback behavior if author hasn't added CTA Button Color",
+          "points": 3
+        },
+        {
+          "Issue key": "CW-5576",
+          "summary": "In-Correct Behavior Of The Watch Video Button On The Best interest Page",
+          "points": 3
+        },
+        {
+          "Issue key": "CW-4804",
+          "summary": "Harvest Morningstar Author Information from Sitemap",
+          "points": 3
+        },
+        {
+          "Issue key": "WPMA-6202",
+          "summary": "BE: API-level update for RM Standardized SSO Error Message Display ",
+          "points": 2
+        }
+      ],
+      "count": 7,
+      "description": "Designed high-performance Node.js backends and API orchestration layers (BFF). Specialized in PostgreSQL and Redis for financial advisory tools."
+    },
+    {
+      "skill": "Systems Engineering",
+      "total_points": 0,
+      "projects": [],
+      "highlights": [],
+      "count": 0,
+      "description": "Technical Team Lead with a B.S. in Systems Engineering (Honors). Managed full product lifecycles and mentored engineering squads in Agile/Scrum."
+    },
+    {
+      "skill": "Data Visualization",
+      "total_points": 43,
+      "projects": [
+        "Projections Chart",
+        "FE Spike",
+        "Retired User"
+      ],
+      "highlights": [
+        {
+          "Issue key": "CW-4656",
+          "summary": "Embed the Mo Chatbot into Staging Data & Analytics Page",
+          "points": 13
+        },
+        {
+          "Issue key": "WPMA-4665",
+          "summary": "SPIKE: RM5 Product Tracking Analytics",
+          "points": 5
+        },
+        {
+          "Issue key": "WPMA-16405",
+          "summary": " Update Spend Down Chart Income Secure 2.0",
+          "points": 5
+        },
+        {
+          "Issue key": "WPMA-5229",
+          "summary": "RM5 User Engagement Analytics - # of Clicks in Account Card Page ",
+          "points": 3
+        },
+        {
+          "Issue key": "WPMA-5511",
+          "summary": "RM User Analytics - Implement Service to Create Custom Attributes",
+          "points": 3
+        }
+      ],
+      "count": 28,
+      "description": "Developing interactive financial dashboards and observability platforms (New Relic) to monitor system performance and user engagement."
+    },
+    {
+      "skill": "Security & Compliance",
+      "total_points": 5,
+      "projects": [
+        "Income secure",
+        "Research"
+      ],
+      "highlights": [
+        {
+          "Issue key": "CW-6541",
+          "summary": "OneTrust h2 headings appearing in SEO markup",
+          "points": 3
+        },
+        {
+          "Issue key": "WPMA-10830",
+          "summary": "Research - Retirement Age and Social Security Age Advice ",
+          "points": 1
+        },
+        {
+          "Issue key": "WPMA-10569",
+          "summary": "Social Security Projection save button not functional",
+          "points": 1
+        },
+        {
+          "Issue key": "WPMA-13785",
+          "summary": "Income secure - Oh no error is seen during submitting strategy when user edits Social security projections",
+          "points": 0
+        }
+      ],
+      "count": 4,
+      "description": "Ensured architectural patterns comply with international financial standards. Managing secure deployments and OneTrust integrations."
+    },
+    {
+      "skill": "Testing & QA Automation",
+      "total_points": 6,
+      "projects": [
+        "FE DEV+QA"
+      ],
+      "highlights": [
+        {
+          "Issue key": "WPMA-6035",
+          "summary": "FE DEV+QA: RM Standardized SSO Error Message Display ",
+          "points": 5
+        },
+        {
+          "Issue key": "CW-5981",
+          "summary": "[GET /v1/collections] Endpoint returns a status code 401 (qa|stg)",
+          "points": 1
+        },
+        {
+          "Issue key": "WPMA-15605",
+          "summary": "{NO QA} Investigate last 2 weeks of data",
+          "points": 0
+        },
+        {
+          "Issue key": "WPMA-15534",
+          "summary": "{NO QA} Validate Page Actions in Relic",
+          "points": 0
+        }
+      ],
+      "count": 4,
+      "description": "Established engineering standards and code review processes. Focused on vitest/playwright automation to ensure 24/7 availability."
+    }
+  ],
+  "pillars": {
+    "strangler": {
+      "title": "Strangler Pattern Implementation",
+      "subtitle": "Legacy Modernization: Ember.js → Vue 3",
+      "content": "Architected a hybrid micro-frontend bridge using Module Federation to seamlessly embed Vue 3 components into a legacy .NET/Ember.js monolith. This allowed for a granular migration where high-value features were rewritten without service interruption.",
+      "metrics": [
+        {
+          "label": "LCP Improvement",
+          "value": "30%"
+        },
+        {
+          "label": "User Base",
+          "value": "300k+"
+        },
+        {
+          "label": "Status",
+          "value": "Production"
+        }
+      ]
+    },
+    "certs": {
+      "title": "Technical Validations",
+      "subtitle": "Industry-Standard Certifications",
+      "content": "Professional certifications verifying expertise in Generative AI, Cloud Infrastructure, and Scalable Architecture.",
+      "items": [
+        "NVIDIA-Certified Associate Generative AI LLMs",
+        "AWS Cloud Practitioner"
+      ]
+    },
+    "education": {
+      "title": "Academic Organization",
+      "subtitle": "Universidad del Valle",
+      "content": "B.S. in Systems Engineering, graduated with honors. Focused on technical team leadership, product ownership (Skills Gym), and high-reliability systems design.",
+      "metrics": [
+        {
+          "label": "Distinction",
+          "value": "Honors"
+        }
+      ]
+    }
+  }
+}
