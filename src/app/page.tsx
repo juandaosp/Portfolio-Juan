@@ -1,6 +1,7 @@
 import { BentoGrid } from "@/components/Dashboard/BentoGrid";
 import ChatWindow from "@/components/Chatbot/ChatWindow";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <BentoGrid />
       <ChatWindow />
       <SpeedInsights />
+      <Analytics />
     </main>
   );
 }
