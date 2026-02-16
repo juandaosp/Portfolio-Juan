@@ -2,19 +2,19 @@
   "Vue.js / Frontend Architecture": [
     {
       "date": "2021-06",
-      "points": 3.0
+      "points": 2.0
     },
     {
       "date": "2021-07",
-      "points": 6.0
+      "points": 1.0
     },
     {
       "date": "2021-08",
-      "points": 11.0
+      "points": 4.0
     },
     {
       "date": "2021-09",
-      "points": 18.0
+      "points": 12.0
     },
     {
       "date": "2021-10",
@@ -22,15 +22,15 @@
     },
     {
       "date": "2021-11",
-      "points": 15.0
-    },
-    {
-      "date": "2021-12",
       "points": 10.0
     },
     {
+      "date": "2021-12",
+      "points": 14.0
+    },
+    {
       "date": "2022-01",
-      "points": 11.0
+      "points": 18.0
     },
     {
       "date": "2022-02",
@@ -38,31 +38,31 @@
     },
     {
       "date": "2022-03",
-      "points": 14.0
+      "points": 11.0
     },
     {
       "date": "2022-04",
-      "points": 2.0
+      "points": 1.0
     },
     {
       "date": "2022-05",
-      "points": 12.0
+      "points": 1.0
     },
     {
       "date": "2022-06",
-      "points": 20.0
+      "points": 17.0
     },
     {
       "date": "2022-07",
-      "points": 12.0
+      "points": 9.0
     },
     {
       "date": "2022-08",
-      "points": 13.0
+      "points": 16.0
     },
     {
       "date": "2022-09",
-      "points": 13.0
+      "points": 12.0
     },
     {
       "date": "2022-10",
@@ -126,19 +126,19 @@
     },
     {
       "date": "2024-01",
-      "points": 5.0
+      "points": 10.0
     },
     {
       "date": "2024-02",
-      "points": 2.5
-    },
-    {
-      "date": "2024-03",
       "points": 5.5
     },
     {
+      "date": "2024-03",
+      "points": 0.5
+    },
+    {
       "date": "2024-04",
-      "points": 19.0
+      "points": 17.0
     },
     {
       "date": "2024-05",
@@ -150,11 +150,11 @@
     },
     {
       "date": "2024-07",
-      "points": 26.0
+      "points": 41.0
     },
     {
       "date": "2024-08",
-      "points": 10.0
+      "points": 13.0
     },
     {
       "date": "2024-09",
@@ -162,15 +162,15 @@
     },
     {
       "date": "2024-10",
-      "points": 8.0
+      "points": 6.0
     },
     {
       "date": "2024-11",
-      "points": 16.5
+      "points": 14.0
     },
     {
       "date": "2024-12",
-      "points": 18.5
+      "points": 20.5
     },
     {
       "date": "2025-01",
@@ -178,11 +178,11 @@
     },
     {
       "date": "2025-02",
-      "points": 15.0
+      "points": 14.0
     },
     {
       "date": "2025-03",
-      "points": 5.0
+      "points": 21.0
     },
     {
       "date": "2025-04",
@@ -190,53 +190,115 @@
     },
     {
       "date": "2025-05",
-      "points": 18.5
+      "points": 21.5
     },
     {
       "date": "2025-06",
-      "points": 41.0
+      "points": 51.0
     },
     {
       "date": "2025-07",
-      "points": 31.5
+      "points": 38.5
     },
     {
       "date": "2025-08",
-      "points": 12.0
+      "points": 25.5
     },
     {
       "date": "2025-09",
-      "points": 24.0
+      "points": 32.0
     },
     {
       "date": "2025-10",
-      "points": 18.0
+      "points": 30.0
     },
     {
       "date": "2025-11",
-      "points": 20.0
+      "points": 21.5
     },
     {
       "date": "2025-12",
-      "points": 28.5
+      "points": 29.5
     },
     {
       "date": "2026-01",
-      "points": 15.0
+      "points": 20.0
     },
     {
       "date": "2026-02",
       "points": 2.0
     }
   ],
-  "AI Engineering & LLMs": [
+  "Legacy Modernization (Strangler Pattern)": [
     {
-      "date": "2021-06",
+      "date": "2021-08",
+      "points": 6.0
+    },
+    {
+      "date": "2021-09",
       "points": 2.0
     },
     {
+      "date": "2021-10",
+      "points": 5.0
+    },
+    {
+      "date": "2021-11",
+      "points": 10.0
+    },
+    {
+      "date": "2022-02",
+      "points": 3.0
+    },
+    {
+      "date": "2022-03",
+      "points": 3.0
+    },
+    {
+      "date": "2022-04",
+      "points": 1.0
+    },
+    {
+      "date": "2022-05",
+      "points": 11.0
+    },
+    {
+      "date": "2022-06",
+      "points": 3.0
+    },
+    {
+      "date": "2022-12",
+      "points": 0.0
+    },
+    {
+      "date": "2023-02",
+      "points": 0.0
+    },
+    {
+      "date": "2023-10",
+      "points": 0.0
+    }
+  ],
+  "AI & Data Infrastructure": [
+    {
+      "date": "2021-06",
+      "points": 3.0
+    },
+    {
       "date": "2021-07",
-      "points": 6.0
+      "points": 11.0
+    },
+    {
+      "date": "2021-08",
+      "points": 1.0
+    },
+    {
+      "date": "2021-12",
+      "points": 2.0
+    },
+    {
+      "date": "2023-03",
+      "points": 0.0
     },
     {
       "date": "2024-07",
@@ -248,7 +310,11 @@
     },
     {
       "date": "2025-02",
-      "points": 11.0
+      "points": 5.0
+    },
+    {
+      "date": "2025-04",
+      "points": 8.0
     },
     {
       "date": "2025-05",
@@ -271,7 +337,39 @@
       "points": 2.0
     }
   ],
-  "Cloud Systems & DevOps": [
+  "Engineering Excellence & SRE": [
+    {
+      "date": "2021-09",
+      "points": 7.0
+    },
+    {
+      "date": "2021-11",
+      "points": 6.0
+    },
+    {
+      "date": "2021-12",
+      "points": 2.0
+    },
+    {
+      "date": "2022-01",
+      "points": 2.0
+    },
+    {
+      "date": "2022-07",
+      "points": 3.0
+    },
+    {
+      "date": "2022-09",
+      "points": 4.0
+    },
+    {
+      "date": "2022-10",
+      "points": 2.0
+    },
+    {
+      "date": "2022-11",
+      "points": 1.0
+    },
     {
       "date": "2023-02",
       "points": 0.0
@@ -281,161 +379,11 @@
       "points": 0.0
     },
     {
-      "date": "2025-03",
-      "points": 3.0
-    },
-    {
-      "date": "2025-08",
-      "points": 5.0
-    }
-  ],
-  "Backend & API Design": [
-    {
-      "date": "2021-09",
-      "points": 3.0
-    },
-    {
-      "date": "2022-01",
-      "points": 4.0
-    },
-    {
-      "date": "2022-09",
-      "points": 1.0
-    },
-    {
-      "date": "2022-11",
-      "points": 1.0
-    },
-    {
-      "date": "2023-01",
+      "date": "2023-05",
       "points": 0.0
-    },
-    {
-      "date": "2023-08",
-      "points": 0.0
-    },
-    {
-      "date": "2023-09",
-      "points": 0.0
-    },
-    {
-      "date": "2023-11",
-      "points": 0.0
-    },
-    {
-      "date": "2024-07",
-      "points": 15.0
-    },
-    {
-      "date": "2024-08",
-      "points": 1.0
-    },
-    {
-      "date": "2024-11",
-      "points": 0.5
-    },
-    {
-      "date": "2024-12",
-      "points": 3.0
-    },
-    {
-      "date": "2025-03",
-      "points": 15.0
-    },
-    {
-      "date": "2025-04",
-      "points": 8.0
-    },
-    {
-      "date": "2025-05",
-      "points": 3.0
-    },
-    {
-      "date": "2025-06",
-      "points": 10.0
-    },
-    {
-      "date": "2025-07",
-      "points": 7.0
-    },
-    {
-      "date": "2025-08",
-      "points": 9.0
-    },
-    {
-      "date": "2025-09",
-      "points": 9.0
-    },
-    {
-      "date": "2025-10",
-      "points": 5.0
-    },
-    {
-      "date": "2025-11",
-      "points": 1.5
-    },
-    {
-      "date": "2025-12",
-      "points": 1.0
-    },
-    {
-      "date": "2026-01",
-      "points": 2.0
-    }
-  ],
-  "Systems Engineering": [
-    {
-      "date": "2022-09",
-      "points": 2.0
     },
     {
       "date": "2023-06",
-      "points": 0.0
-    },
-    {
-      "date": "2023-10",
-      "points": 0.0
-    }
-  ],
-  "Data Visualization": [
-    {
-      "date": "2021-10",
-      "points": 5.0
-    },
-    {
-      "date": "2021-11",
-      "points": 11.0
-    },
-    {
-      "date": "2021-12",
-      "points": 8.0
-    },
-    {
-      "date": "2022-01",
-      "points": 5.0
-    },
-    {
-      "date": "2022-02",
-      "points": 3.0
-    },
-    {
-      "date": "2022-08",
-      "points": 3.0
-    },
-    {
-      "date": "2022-10",
-      "points": 1.0
-    },
-    {
-      "date": "2022-12",
-      "points": 0.0
-    },
-    {
-      "date": "2023-03",
-      "points": 0.0
-    },
-    {
-      "date": "2023-05",
       "points": 0.0
     },
     {
@@ -463,48 +411,56 @@
       "points": 0.0
     },
     {
-      "date": "2024-01",
+      "date": "2024-03",
       "points": 5.0
+    },
+    {
+      "date": "2024-04",
+      "points": 2.0
+    },
+    {
+      "date": "2024-08",
+      "points": 1.0
+    },
+    {
+      "date": "2024-10",
+      "points": 2.0
+    },
+    {
+      "date": "2024-11",
+      "points": 3.0
+    },
+    {
+      "date": "2024-12",
+      "points": 1.0
     },
     {
       "date": "2025-01",
       "points": 2.0
     },
     {
-      "date": "2025-10",
-      "points": 2.0
-    }
-  ],
-  "Security & Compliance": [
-    {
-      "date": "2022-10",
-      "points": 1.0
+      "date": "2025-02",
+      "points": 7.0
     },
     {
       "date": "2025-03",
-      "points": 2.0
+      "points": 4.0
     },
     {
-      "date": "2025-10",
-      "points": 5.0
-    },
-    {
-      "date": "2026-01",
-      "points": 3.0
-    }
-  ],
-  "Testing & QA Automation": [
-    {
-      "date": "2023-09",
+      "date": "2025-05",
       "points": 0.0
     },
     {
-      "date": "2024-02",
-      "points": 3.0
+      "date": "2025-07",
+      "points": 0.0
     },
     {
-      "date": "2024-08",
-      "points": 3.0
+      "date": "2025-08",
+      "points": 0.5
+    },
+    {
+      "date": "2025-09",
+      "points": 1.0
     }
   ]
 }

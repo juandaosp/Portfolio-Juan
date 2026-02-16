@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, Hash, TrendingUp, Zap, Filter, Layout, Cpu, Database, Shield, Activity, Terminal } from 'lucide-react';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { useEffect, useMemo, useState } from 'react';
+import { motion } from 'framer-motion';
+import { X, Hash, TrendingUp } from 'lucide-react';
+import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import trends from '@/data/skill_trends.json';
+import { Badge } from "@/components/Badge/Badge";
 
 const getTypeColor = (type: string) => {
   switch (type?.toLowerCase()) {
@@ -17,7 +18,7 @@ const getTypeColor = (type: string) => {
   }
 };
 
-export default function JiraDrawer({ skillData, onClose }: any) {
+export default function JiraDrawer({ skillData, onClose, currentFilter, setCurrentFilter }: any) {
   const [activeProject, setActiveProject] = useState('All');
 
   useEffect(() => {
@@ -35,46 +36,59 @@ export default function JiraDrawer({ skillData, onClose }: any) {
       key => key.toLowerCase() === skillData.skill.toLowerCase()
     );
     console.log('trendKey', trendKey);
-    
+
     const rawData = trendKey ? (trends as any)[trendKey] : [];
-    console.log('rawData', rawData);
     if (rawData.length === 0) return [];
-  
+
     // 1. Sort the raw data by date
     const sortedData = [...rawData].sort((a, b) => a.date.localeCompare(b.date));
     console.log('sortedData', sortedData);
     // 2. Create a Map for fast lookup
     const dataMap = new Map(sortedData.map(d => [d.date, d.points]));
-    console.log('dataMap', dataMap)
     // 3. Generate a continuous timeline from start date to end date
     const filledData = [];
     const start = new Date(sortedData[0].date + "-01");
     const end = new Date(sortedData[sortedData.length - 1].date + "-01");
-  
+
     let current = new Date(start);
     while (current <= end) {
       // Format current date to YYYY-MM using UTC to avoid timezone shifts
       const y = current.getUTCFullYear();
       const m = String(current.getUTCMonth() + 1).padStart(2, '0');
       const monthKey = `${y}-${m}`;
-      
+
       filledData.push({
         date: monthKey,
         points: dataMap.get(monthKey) || 0 // If no data for this month, use 0
       });
-      
+
       current.setUTCMonth(current.getUTCMonth() + 1);
     }
-  
+
     // NOTE: We don't filter trends by project here because trends.json 
     // represents your global skill velocity. 
     return filledData;
   }, [skillData.skill]); // Removed activeProject dependency since JSON doesn't support it
   // Project Filtering Logic
+  // Project & Tech Filtering Logic
   const filteredHighlights = useMemo(() => {
-    if (activeProject === 'All') return skillData.highlights;
-    return skillData.highlights.filter((h: any) => h.project === activeProject);
-  }, [skillData.highlights, activeProject]);
+    let list = skillData.highlights || [];
+
+    // 1. Filter by Project first (unless 'All' is selected)
+    if (activeProject !== 'All') {
+      list = list.filter((h: any) => h.project === activeProject);
+    }
+
+    // 2. Filter by Tech Badge
+    if (currentFilter) {
+      list = list.filter((h: any) =>
+        h.techStack?.includes(currentFilter)
+      );
+    }
+
+    return list;
+    // Added currentFilter to dependencies so it triggers a re-render
+  }, [skillData.highlights, activeProject, currentFilter]);
 
   const typeStats = useMemo(() => {
     const stats: Record<string, number> = {};
@@ -174,7 +188,7 @@ export default function JiraDrawer({ skillData, onClose }: any) {
 
           {/* Engineering Logs with Tech Breadcrumbs */}
           <div className="space-y-4 pb-20">
-            <h3 className="text-[10px] font-bold text-slate-500 uppercase flex items-center gap-2 tracking-[0.2em]"><Hash size={12} /> Work Logs ({filteredHighlights.length})</h3>
+            <h3 className="text-[10px] font-bold text-slate-300 uppercase flex items-center gap-2 tracking-[0.2em]"><Hash size={12} /> Work Logs ({filteredHighlights.length})</h3>
             <div className="grid gap-4">
               {filteredHighlights?.map((ticket: any, i: number) => (
                 <div key={i} className="group bg-[#111] border border-slate-800 p-4 hover:border-blue-500/50 transition-all">
@@ -188,11 +202,16 @@ export default function JiraDrawer({ skillData, onClose }: any) {
                   <p className="text-slate-200 text-md leading-relaxed font-light mb-3">{ticket.summary}</p>
 
                   {/* Tech Breadcrumb Tags */}
-                  <div className="flex flex-wrap gap-1.5 mb-4">
-                    {ticket.tech?.map((t: string) => (
-                      <span key={t} className="text-[12px] font-mono bg-white px-2 text-black  rounded-sm uppercase">
-                        {t}
-                      </span>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {ticket.techStack.map((tech: string) => (
+                      <Badge
+                        key={tech}
+                        label={tech}
+                        isActive={currentFilter === tech}
+                        onClick={(value) => {
+                          setCurrentFilter(currentFilter === value ? null : value);
+                        }}
+                      />
                     ))}
                   </div>
 
@@ -204,13 +223,6 @@ export default function JiraDrawer({ skillData, onClose }: any) {
               ))}
             </div>
           </div>
-        </div>
-
-        {/* Footer */}
-        <div className="p-6 border-t border-slate-800 bg-black/90 sticky bottom-0">
-          <button className="w-full py-3 bg-white text-black text-[10px] font-black uppercase tracking-[0.2em] hover:invert transition-all">
-            Generate {activeProject === 'All' ? 'Consolidated' : activeProject} Report
-          </button>
         </div>
       </motion.div>
     </div>

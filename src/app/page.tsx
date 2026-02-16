@@ -54,9 +54,12 @@ function SkillLogCard({ skillData, onClick }: { skillData: any, onClick: () => v
   );
 }
 
+
+
 export default function PortfolioDashboard() {
   const [selectedSkill, setSelectedSkill] = useState<any | null>(null);
   const [selectedPillar, setSelectedPillar] = useState<any | null>(null);
+  const [currentFilter, setCurrentFilter] = useState<string | null>(null);
   // Helper to safely handle different JSON formats for pillars
   const pillarItems = Array.isArray(data?.pillars)
     ? data.pillars
@@ -105,7 +108,7 @@ export default function PortfolioDashboard() {
 
         <div className="space-y-8">
           <div className="flex items-center gap-4">
-           <h3 className="text-white uppercase tracking-[0.1em] text-xl font-black">02. Technical_Taxonomy</h3>
+            <h3 className="text-white uppercase tracking-[0.1em] text-xl font-black">02. Technical_Taxonomy</h3>
             <div className="h-[1px] flex-grow bg-slate-900"></div>
           </div>
 
@@ -125,7 +128,7 @@ export default function PortfolioDashboard() {
           <div className="flex items-center gap-4">
             <h2 className="text-white text-xl font-bold tracking-tighter uppercase italic">03. AI & Data Laboratory</h2>
             <div className="h-[1px] flex-grow bg-blue-500/20"></div>
-            <span className="text-blue-500 font-mono text-[9px] border border-blue-500/30 px-2 py-0.5 animate-pulse">NVIDIA_SYSTEMS_ACTIVE</span>
+            <span className="text-blue-500 font-mono text-[12px] border border-blue-500/90 px-2 py-0.5 animate-pulse">NVIDIA_SYSTEMS_ACTIVE</span>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8">
@@ -158,12 +161,12 @@ export default function PortfolioDashboard() {
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white/[0.02] border border-slate-800 p-6 rounded-sm">
-                  <div className="text-blue-500 font-mono font-black text-2xl tracking-tighter">30%</div>
-                  <div className="text-[8px] text-slate-500 uppercase tracking-[0.2em] mt-1">Efficiency_Gain</div>
+                  <div className="text-white font-mono font-black text-2xl tracking-tighter">30%</div>
+                  <div className="text-[9px] text-slate-200 uppercase tracking-[0.2em] mt-1">Efficiency_Gain</div>
                 </div>
                 <div className="bg-white/[0.02] border border-slate-800 p-6 rounded-sm">
                   <div className="text-white font-mono font-black text-2xl tracking-tighter uppercase">AWS</div>
-                  <div className="text-[8px] text-slate-500 uppercase tracking-[0.2em] mt-1">Core_Hosting</div>
+                  <div className="text-[9px] text-slate-200 uppercase tracking-[0.2em] mt-1">Core_Hosting</div>
                 </div>
               </div>
             </div>
@@ -177,7 +180,12 @@ export default function PortfolioDashboard() {
         {selectedSkill && (
           <JiraDrawer
             skillData={selectedSkill}
-            onClose={() => setSelectedSkill(null)}
+            currentFilter={currentFilter}
+            setCurrentFilter={setCurrentFilter} // Pass the setter function
+            onClose={() => {
+              setSelectedSkill(null);
+              setCurrentFilter(null); // Reset filter when closing
+            }}
           />
         )}
 
