@@ -18,6 +18,14 @@
   }
 }
 
+/* Add this to your globals.css */
+@layer utilities {
+  .force-front {
+    z-index: 9999 !important;
+    pointer-events: all !important;
+  }
+}
+
 /* Correct Tailwind v4 Utility Definitions */
 @utility glass-card {
   background-color: rgba(24, 24, 27, 0.5); /* zinc-900/50 */
@@ -35,4 +43,16 @@
   background-clip: text;
   color: transparent;
   background-image: linear-gradient(to bottom, #ffffff, #71717a);
+}
+
+/* Force the grid to the front regardless of what Next.js/Tailwind v4 is doing */
+.grid-container-fix {
+  position: relative !important;
+  z-index: 999 !important;
+  pointer-events: auto !important;
+}
+
+.skill-card-fix {
+  pointer-events: auto !important;
+  cursor: pointer !important;
 }
