@@ -11,17 +11,18 @@ const HeroSection = () => {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
           </span>
-          Senior Software Engineer | AI & Frontend
+          Vue 3 Platform Engineer · NVIDIA Certified AI
         </div>
 
         <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-white leading-tight">
-          Architecting <br />
-          <span className="text-gradient">Resilient Systems</span>
+          Frontend Platform <br />
+          <span className="text-gradient">Engineer & Architect</span>
         </h1>
 
         <p className="max-w-xl text-xl text-zinc-200 leading-relaxed font-light">
-          Bridging the gap between legacy enterprise monoliths and modern
-          Generative AI infrastructure for <span className="text-white font-medium">2M+ users</span>.
+          Modernizing enterprise-scale financial systems for{" "}
+          <span className="text-white font-medium">2M+ users</span>{" "}
+          — and building the AI infrastructure that powers what comes next.
         </p>
       </header>
 
