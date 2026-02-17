@@ -13,14 +13,14 @@ const HeroSection = () => {
           </span>
           Senior Software Engineer | AI & Frontend
         </div>
-        
+
         <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-white leading-tight">
           Architecting <br />
           <span className="text-gradient">Resilient Systems</span>
         </h1>
-        
+
         <p className="max-w-xl text-xl text-zinc-200 leading-relaxed font-light">
-          Bridging the gap between legacy enterprise monoliths and modern 
+          Bridging the gap between legacy enterprise monoliths and modern
           Generative AI infrastructure for <span className="text-white font-medium">2M+ users</span>.
         </p>
       </header>
@@ -33,10 +33,30 @@ const HeroSection = () => {
           View Case Studies
         </button>
         <button
-          onClick={() => scrollToSection('strategic-log')} 
+          onClick={() => scrollToSection('strategic-log')}
           className="px-6 py-3 bg-transparent border border-white/10 text-zinc-300 font-bold rounded-sm hover:bg-zinc-900 transition-all uppercase tracking-tighter text-xs inline-flex items-center gap-2">
           <Terminal size={14} /> Architecture Log
         </button>
+      </div>
+
+      {/* METRICS STRIP - Addressing the "What to How Much" critique */}
+      <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-slate-900 pt-8">
+        <div>
+          <div className="text-white text-xl font-bold font-mono">2M+</div>
+          <div className="text-[10px] text-slate-300 uppercase tracking-widest">Active Users Supported</div>
+        </div>
+        <div>
+          <div className="text-white text-xl font-bold font-mono">45%</div>
+          <div className="text-[10px] text-slate-300 uppercase tracking-widest">Velocity Increase</div>
+        </div>
+        <div>
+          <div className="text-white text-xl font-bold font-mono">30%</div>
+          <div className="text-[10px] text-slate-300 uppercase tracking-widest">Efficiency Gains</div>
+        </div>
+        <div>
+          <div className="text-blue-500 text-xl font-bold font-mono">NVIDIA</div>
+          <div className="text-[10px] text-slate-300 uppercase tracking-widest">AI Certified</div>
+        </div>
       </div>
     </div>
   );
