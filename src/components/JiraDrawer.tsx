@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { X, Hash, TrendingUp } from 'lucide-react';
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import trends from '@/data/skill_trends.json';
-import { Badge } from "@/components/Badge/Badge";
+import Badge from "@/components/Badge";
 
 const getTypeColor = (type: string) => {
   switch (type?.toLowerCase()) {

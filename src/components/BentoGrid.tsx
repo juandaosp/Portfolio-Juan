@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 import data from '@/data/portfolio_data.json';
 import { PortfolioData } from '@/types/metrics';
-import JiraDrawer from '@/components/JiraDrawer/JiraDrawer';
+import JiraDrawer from '@/components/JiraDrawer';
 
 const typedData = data as unknown as PortfolioData;
 

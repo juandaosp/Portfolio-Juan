@@ -27,15 +27,26 @@ const HeroSection = () => {
 
       {/* pointer-events-auto turns clicks back ON for the buttons */}
       <div className="flex flex-wrap gap-4 items-center pt-4 pointer-events-auto">
-        <button className="px-6 py-3 bg-white text-black font-bold rounded-sm hover:bg-blue-600 hover:text-white transition-all uppercase tracking-tighter text-xs">
+        <button
+          onClick={() => scrollToSection('strategic-architecture')}
+          className="px-6 py-3 bg-white text-black font-bold rounded-sm hover:bg-blue-600 hover:text-white transition-all uppercase tracking-tighter text-xs">
           View Case Studies
         </button>
-        <button className="px-6 py-3 bg-transparent border border-white/10 text-zinc-300 font-bold rounded-sm hover:bg-zinc-900 transition-all uppercase tracking-tighter text-xs inline-flex items-center gap-2">
+        <button
+          onClick={() => scrollToSection('strategic-log')} 
+          className="px-6 py-3 bg-transparent border border-white/10 text-zinc-300 font-bold rounded-sm hover:bg-zinc-900 transition-all uppercase tracking-tighter text-xs inline-flex items-center gap-2">
           <Terminal size={14} /> Architecture Log
         </button>
       </div>
     </div>
   );
+};
+
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
 };
 
 export default HeroSection;

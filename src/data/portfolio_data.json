@@ -5670,9 +5670,25 @@
   ],
   "pillars": [
     {
-      "title": "Strangler Pattern",
+      "id": "ADR-001",
+      "title": "Micro-Frontend Bridge (Strangler Pattern)",
       "subtitle": "Legacy Modernization: Ember.js \u2192 Vue 3",
-      "content": "Architected a hybrid micro-frontend bridge using Module Federation to seamlessly embed Vue 3 components into Retirement Manager monolith.",
+      "status": "Accepted",
+      "date": "2023-Q2",
+      "context": "The Retirement Manager monolith (Ember.js) was becoming difficult to maintain and slowed down feature delivery. A full rewrite was too risky for 300k+ users.",
+      "decision": "Implemented the Strangler Fig pattern using Webpack Module Federation to host new Vue 3 micro-frontends within the legacy Ember shell.",
+      "consequences": [
+        "Independent deployment cycles for new features",
+        "Shared state between frameworks via custom event bus and Pinia",
+        "30% improvement in Largest Contentful Paint (LCP)"
+      ],
+      "techStack": [
+        "Module Federation",
+        "Vue 3",
+        "Ember.js",
+        "Pinia",
+        "NX"
+      ],
       "metrics": [
         {
           "label": "LCP Improvement",
@@ -5681,24 +5697,54 @@
       ]
     },
     {
-      "title": "NVIDIA GenAI",
-      "subtitle": "LLM Infrastructure",
-      "content": "Certified expert building AI-driven infrastructure and high-performance inference endpoints for financial data.",
+      "id": "ADR-002",
+      "title": "Automated AI Content Ingestion",
+      "subtitle": "Intelligence Discovery & Crawler Architecture",
+      "status": "Accepted",
+      "date": "2024-Q3",
+      "context": "Needed to transition from static document storage to an AI-ready knowledge base. Manual indexing of thousands of Research Papers was not scalable.",
+      "decision": "Developed a custom crawler architecture using Playwright and Node.js to automate document discovery and metadata extraction across global properties.",
+      "consequences": [
+        "100% automation of research document ingestion.",
+        "Established a clean data pipeline for downstream LLM training/RAG.",
+        "Reduced data latency between publication and AI availability."
+      ],
+      "techStack": [
+        "Node.js",
+        "Playwright",
+        "AWS S3",
+        "GPT-Crawler",
+        "NX"
+      ],
       "metrics": [
         {
-          "label": "Efficiency",
-          "value": "30%+"
+          "label": "Automation Rate",
+          "value": "100%"
         }
       ]
     },
     {
-      "title": "Systems Engineering",
-      "subtitle": "Universidad del Valle",
-      "content": "B.S. in Systems Engineering (Honors). Technical leadership and mentoring in high-stakes financial environments.",
+      "id": "ADR-003",
+      "title": "Engineering Leadership & Observability",
+      "subtitle": "Strategic Monitoring & Technical Mentorship",
+      "status": "Accepted",
+      "date": "2022-Q2",
+      "context": "Scaling to 2M+ monthly users required moving from reactive bug-fixing to proactive system health. Simultaneously, the engineering squad required standardized quality gates to maintain delivery speed.",
+      "decision": "Architected a data-driven observability strategy using New Relic (APM & Browser) for the RM-UI ecosystem. Mentored a squad of 8 engineers, establishing rigorous code review and Agile standards.",
+      "consequences": [
+        "Improving system efficiency by up to 30% through data-driven observability (New Relic).",
+        "25% increase in team velocity via technical and standardized engineering practices.",
+        "Established granular interaction tracking for high-stakes financial tools (WPMA-12554, WPMA-12747)."
+      ],
+      "techStack": ["New Relic", "SonarQube", "Vue.js", "Agile/Scrum", "Splunk"],
       "metrics": [
         {
-          "label": "Distinction",
-          "value": "Honors"
+          "label": "Velocity Increase",
+          "value": "25%"
+        },
+        {
+          "label": "System Efficiency",
+          "value": "20%"
         }
       ]
     }

@@ -2,57 +2,15 @@
 
 import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import HeroSection from '@/components/Hero/HeroSection';
-import JiraDrawer from '@/components/JiraDrawer/JiraDrawer';
-import PillarCard from '@/components/PillarCard/PillarCard';
+import HeroSection from '@/components/HeroSection';
+import SkillLogCard from '@/components/SkillLogCard'
+import JiraDrawer from '@/components/JiraDrawer';
+import PillarCard from '@/components/PillarCard';
 import data from '@/data/portfolio_data.json';
-import PillarDrawer from '@/components/PillarDrawer/PilarDrawer';
+import PillarDrawer from '@/components/PilarDrawer';
+import ArchitectureLog from '@/components/ArchitectureLog';
 
-function SkillLogCard({ skillData, onClick }: { skillData: any, onClick: () => void }) {
-  // Scale percentage based on a senior-level point target (e.g., 300 SP)
-  const percentage = Math.min((skillData.total_points / 300) * 100, 100);
 
-  return (
-    <div
-      onClick={onClick}
-      className="bg-[#0c0c0c] border border-slate-800 p-6 hover:border-blue-500/50 hover:bg-[#111] transition-all group flex flex-col justify-between h-full rounded-sm cursor-pointer active:scale-[0.98] relative z-10 overflow-hidden"
-    >
-      {/* Subtle scanline effect for senior technical feel */}
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-500/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-
-      <div>
-        <div className="flex justify-between items-start mb-8">
-          <div className="p-2 bg-slate-900 border border-slate-300 text-slate-200 group-hover:text-blue-400 group-hover:border-blue-500/30 transition-all">
-            <code className="text-[10px] font-mono">{`>_`}</code>
-          </div>
-          <div className="flex flex-col items-end">
-            <span className="text-[10px] font-mono text-slate-200 tracking-widest uppercase">Verified_Audit</span>
-            <span className="text-[10px] font-bold text-green-500/40 font-mono">OK</span>
-          </div>
-        </div>
-        <h3 className="text-white text-xs font-bold uppercase tracking-widest mb-2 group-hover:text-blue-500 transition-colors">{skillData.skill}</h3>
-        <p className="text-slate-300 text-[14px] leading-relaxed mb-6 italic line-clamp-2">
-          {skillData.description}
-        </p>
-      </div>
-
-      <div className="space-y-3">
-        <div className="h-[2px] w-full bg-slate-900 overflow-hidden">
-          <div
-            className="h-full bg-blue-600 transition-all duration-1000 ease-out shadow-[0_0_10px_#2563eb]"
-            style={{ width: `${percentage}%` }}
-          />
-        </div>
-        <div className="flex justify-between items-center text-[14px] font-mono">
-          <div className="flex gap-2 text-slate-200 uppercase">
-            <span>{skillData.count} Logs</span>
-          </div>
-          <span className="text-slate-400 font-bold">{skillData.total_points} SP</span>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 
 
@@ -87,7 +45,7 @@ export default function PortfolioDashboard() {
         {/* PILLARS SECTION */}
         <div className="space-y-8">
           <div className="flex items-center gap-4">
-            <h3 className="text-white uppercase tracking-[0.1em] text-xl font-black">01. Strategic Architecture</h3>
+            <h3 id="strategic-architecture" className="text-white uppercase tracking-[0.1em] text-xl font-black">01. Strategic_Architecture</h3>
             <div className="h-[1px] flex-grow bg-slate-900"></div>
           </div>
           <div className="grid md:grid-cols-3 gap-4">
@@ -126,7 +84,7 @@ export default function PortfolioDashboard() {
         {/* AI & DATA LABORATORY */}
         <section className="space-y-8 relative">
           <div className="flex items-center gap-4">
-            <h2 className="text-white text-xl font-bold tracking-tighter uppercase italic">03. AI & Data Laboratory</h2>
+            <h3 className="text-white uppercase tracking-[0.1em] text-xl font-black">03. AI_&_DATA_LABORATORY</h3>
             <div className="h-[1px] flex-grow bg-blue-500/20"></div>
             <span className="text-blue-500 font-mono text-[12px] border border-blue-500/90 px-2 py-0.5 animate-pulse">NVIDIA_SYSTEMS_ACTIVE</span>
           </div>
@@ -171,6 +129,33 @@ export default function PortfolioDashboard() {
               </div>
             </div>
           </div>
+        </section>
+
+        {/* SECTION 04: ARCHITECTURE LOG (ADR Explorer) */}
+        <section className="space-y-8 pt-10">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <h3
+                id="strategic-log"
+                className="text-white uppercase tracking-[0.1em] text-xl font-black">
+                  04. ARCHITECTURE_DESICION_RECORDS
+              </h3>
+              <div className="h-[1px] w-32 bg-blue-500/20"></div>
+            </div>
+            <div className="hidden md:flex items-center gap-4 text-[10px] font-mono text-slate-500 uppercase tracking-widest">
+              <span>Status: Synchronized</span>
+              <span className="w-1 h-1 rounded-full bg-blue-500 animate-ping"></span>
+            </div>
+          </div>
+
+          {/* This is the component you shared */}
+          <div className="shadow-2xl shadow-blue-500/5">
+            <ArchitectureLog />
+          </div>
+
+          <p className="text-slate-300 text-[12px] font-mono italic text-center uppercase tracking-widest">
+            // End of Audit Trail - All records encrypted and verified by Morningstar Eng standards
+          </p>
         </section>
       </div>
       {/* DRAWERS LAYER */}

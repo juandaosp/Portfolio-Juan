@@ -16,7 +16,7 @@ interface BadgeProps {
   className?: string;
 }
 
-export function Badge({ label, onClick, isActive, className }: BadgeProps) {
+export default function Badge({ label, onClick, isActive, className }: BadgeProps) {
   const isClickable = !!onClick;
 
   return (
