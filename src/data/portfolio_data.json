@@ -5672,6 +5672,7 @@
     {
       "id": "ADR-001",
       "title": "Micro-Frontend Bridge (Strangler Pattern)",
+      "liveUrl": "https://www.morningstar.com/business/products/retirement-manager",
       "subtitle": "Legacy Modernization: Ember.js \u2192 Vue 3",
       "status": "Accepted",
       "date": "2023-Q2",
@@ -5699,6 +5700,7 @@
     {
       "id": "ADR-002",
       "title": "Automated AI Content Ingestion",
+      "liveUrl": "https://www.morningstar.com",
       "subtitle": "Intelligence Discovery & Crawler Architecture",
       "status": "Accepted",
       "date": "2024-Q3",
@@ -5726,6 +5728,7 @@
     {
       "id": "ADR-003",
       "title": "Engineering Leadership & Observability",
+      "liveUrl": "https://www.morningstar.com/business",
       "subtitle": "Strategic Monitoring & Technical Mentorship",
       "status": "Accepted",
       "date": "2022-Q2",

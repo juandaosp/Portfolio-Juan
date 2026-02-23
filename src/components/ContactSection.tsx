@@ -44,13 +44,12 @@ export default function ContactSection() {
     return (
         <section id="contact" className="space-y-8 pt-10 scroll-mt-20">
 
-            {/* Section header — matches the pattern of every other section */}
+            {/* Section header */}
             <div className="flex items-center gap-4">
                 <h3 className="text-white uppercase tracking-[0.1em] text-xl font-black">
                     05. CONTACT_PROTOCOL
                 </h3>
                 <div className="h-[1px] flex-grow bg-slate-900" />
-                {/* Blinking availability indicator */}
                 <div className="flex items-center gap-2 font-mono text-[12px] text-emerald-400 uppercase tracking-widest">
                     <span className="relative flex h-2 w-2">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
@@ -70,7 +69,7 @@ export default function ContactSection() {
                     </p>
                     <p className="text-white text-2xl font-black tracking-tight leading-relax">
                         Open to Senior Frontend<br />
-                        <span className="text-slate-400 font-ligh leading-relaxt">
+                        <span className="text-slate-400 font-light leading-relaxed">
                             & Fullstack roles
                         </span>
                     </p>
@@ -79,6 +78,19 @@ export default function ContactSection() {
                         <span className="text-white">Cali, Colombia.</span>{" "}
                         Available for international teams across any timezone.
                     </p>
+
+                    {/* NEW: Availability + Rate strip */}
+                    <div className="grid grid-cols-2 gap-3 pt-2 border-t border-slate-800">
+                        <div className="bg-white/[0.02] border border-slate-800 p-3">
+                            <div className="text-[9px] text-slate-500 uppercase tracking-widest font-mono mb-1">Available</div>
+                            <div className="text-white font-mono font-bold text-sm">May 2026</div>
+                        </div>
+                        <div className="bg-white/[0.02] border border-slate-800 p-3">
+                            <div className="text-[9px] text-slate-500 uppercase tracking-widest font-mono mb-1">Rate</div>
+                            <div className="text-emerald-400 font-mono font-bold text-sm">$5,000+ USD/mo</div>
+                        </div>
+                    </div>
+
                     <div className="pt-2 flex flex-wrap gap-2">
                         {["Vue 3", "Next.js", "FastAPI", "AWS", "AI Infrastructure"].map(
                             (tag) => (
@@ -118,8 +130,7 @@ export default function ContactSection() {
                                     <p className="text-white text-md font-medium">{link.value}</p>
                                 </div>
                             </div>
-                            {/* Arrow — signals it's clickable */}
-                            <span className="text-slate-300 group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-200 font-mono text-lg" >
+                            <span className="text-slate-300 group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-200 font-mono text-lg">
                                 →
                             </span>
                         </motion.a>
@@ -127,7 +138,7 @@ export default function ContactSection() {
                 </div>
             </div>
 
-            {/* Footer audit line — matches the ADR section's closing line */}
+            {/* Footer */}
             <p className="text-slate-400 text-[11px] font-mono italic text-center uppercase tracking-widest pt-4 border-t border-slate-900">
                 // End of transmission — juan david ospina · senior software engineer
             </p>

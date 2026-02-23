@@ -42,7 +42,7 @@ return (
             <h2 className="text-8xl font-black text-white tracking-tighter mb-2">
               451
             </h2>
-            <p className="text-slate-500 uppercase tracking-widest text-[10px] font-mono">
+            <p className="text-slate-300 uppercase tracking-widest text-[12px] font-mono">
               Morningstar + UdV · 5 Years
             </p>
           </div>
@@ -55,7 +55,7 @@ return (
             <h2 className="text-8xl font-black text-white tracking-tighter mb-2">
               92%
             </h2>
-            <p className="text-slate-500 uppercase tracking-widest text-[10px] font-mono">
+            <p className="text-slate-300 uppercase tracking-widest text-[12px] font-mono">
               Bugs & Features · End-to-End
             </p>
           </div>

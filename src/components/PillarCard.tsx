@@ -12,7 +12,8 @@ interface PillarCardProps {
   subtitle: string;
   content: string;
   metrics?: Metric[];
-  onClick: () => void; // 1. Added to interface
+  liveUrl?: string; // NEW
+  onClick: () => void;
 }
 
 const getPillarIcon = (title: string) => {
@@ -22,15 +23,13 @@ const getPillarIcon = (title: string) => {
   return <Award size={18} />;
 };
 
-// 2. Destructured onClick from props
-const PillarCard = ({ title, subtitle, content, metrics, onClick }: PillarCardProps) => {
+const PillarCard = ({ title, subtitle, content, metrics, liveUrl, onClick }: PillarCardProps) => {
   return (
     <div
-      onClick={onClick} // 3. Now it can find the name 'onClick'
+      onClick={onClick}
       className="bg-[#0c0c0c] border border-slate-800 p-6 flex flex-col justify-between group cursor-pointer hover:border-blue-500/50 hover:bg-[#111] transition-all min-h-[220px] relative overflow-hidden"
     >
       <div className="absolute -right-4 -top-4 w-24 h-24 bg-blue-600/5 blur-[50px] group-hover:bg-blue-600/10 transition-all" />
-
       <div>
         <div className="flex items-center gap-4 mb-5">
           <div className="p-2.5 bg-slate-900 border border-slate-800 text-blue-500 group-hover:scale-110 transition-transform duration-500">
@@ -41,12 +40,10 @@ const PillarCard = ({ title, subtitle, content, metrics, onClick }: PillarCardPr
             <p className="text-blue-500 text-[12px] uppercase tracking-widest font-mono font-bold">{subtitle}</p>
           </div>
         </div>
-
         <p className="text-slate-200 text-[16px] leading-relaxed mb-6 font-light">
           {content}
         </p>
       </div>
-
       <div className="space-y-4">
         {metrics && metrics.length > 0 && (
           <div className="grid grid-cols-2 gap-2 pt-4 border-t border-white/5">
@@ -65,6 +62,23 @@ const PillarCard = ({ title, subtitle, content, metrics, onClick }: PillarCardPr
             <path d="M7 17L17 7M17 7H7M17 7V17" />
           </svg>
         </div>
+
+        {/* NEW: Live Project Link */}
+        {liveUrl && (
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()} // prevent opening drawer
+            className="inline-flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-widest text-emerald-400 border border-emerald-500/20 bg-emerald-500/5 px-2 py-1 hover:bg-emerald-500/10 hover:border-emerald-500/40 transition-all w-fit"
+          >
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400" />
+            </span>
+            View_Live →
+          </a>
+        )}
       </div>
     </div>
   );
