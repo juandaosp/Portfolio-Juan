@@ -15,6 +15,8 @@ const SUGGESTED_QUESTIONS = [
     "Tell me about Morningstar",
 ];
 
+
+
 export default function AgentChat() {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([]);
@@ -53,22 +55,8 @@ export default function AgentChat() {
 
             if (!response.ok) throw new Error('Failed');
 
-            const reader = response.body?.getReader();
-            const decoder = new TextDecoder();
-            let fullContent = '';
-
-            if (reader) {
-                while (true) {
-                    const { done, value } = await reader.read();
-                    if (done) break;
-                    const chunk = decoder.decode(value);
-                    fullContent += chunk;
-                    setStreamingContent(fullContent);
-                }
-                reader.releaseLock();
-            }
-
-            setMessages(prev => [...prev, { role: 'assistant', content: fullContent }]);
+            const content = await response.text();
+            setMessages(prev => [...prev, { role: 'assistant', content }]);
             setStreamingContent('');
         } catch {
             setMessages(prev => [...prev, {
@@ -172,8 +160,8 @@ export default function AgentChat() {
                             {messages.map((msg, i) => (
                                 <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                                     <div className={`max-w-[85%] text-sm leading-relaxed ${msg.role === 'user'
-                                            ? 'bg-blue-500/10 border border-blue-500/20 text-blue-100 px-3 py-2 font-mono text-[11px]'
-                                            : 'text-slate-300'
+                                        ? 'bg-blue-500/10 border border-blue-500/20 text-blue-100 px-3 py-2 font-mono text-[11px]'
+                                        : 'text-slate-300'
                                         }`}>
                                         {msg.role === 'assistant' && (
                                             <span className="font-mono text-[9px] text-slate-600 uppercase tracking-widest block mb-1">
