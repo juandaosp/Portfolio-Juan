@@ -116,7 +116,7 @@ export default function AgentChat() {
                                     <div className="w-2 h-2 rounded-full bg-yellow-500/40" />
                                     <div className="w-2 h-2 rounded-full bg-emerald-500/40" />
                                 </div>
-                                <span className="font-mono text-[10px] text-slate-500 uppercase tracking-widest ml-1">
+                                <span className="font-mono text-[10px] text-slate-300 uppercase tracking-widest ml-1">
                                     00_juan_agent.exe
                                 </span>
                             </div>
@@ -133,22 +133,22 @@ export default function AgentChat() {
                             {messages.length === 0 && (
                                 <div className="space-y-4">
                                     <div className="bg-blue-500/5 border border-blue-500/20 p-4 space-y-2">
-                                        <p className="font-mono text-[10px] text-blue-400 uppercase tracking-widest">
+                                        <p className="font-mono text-[12px] text-blue-400 uppercase tracking-widest">
                                             system.init
                                         </p>
-                                        <p className="text-slate-300 text-sm leading-relaxed">
+                                        <p className="text-slate-300 text-md leading-relaxed">
                                             Ask me anything about Juan David's experience, projects, or skills.
                                         </p>
                                     </div>
                                     <div className="space-y-2">
-                                        <p className="font-mono text-[9px] text-slate-600 uppercase tracking-widest">
+                                        <p className="font-mono text-[11px] text-slate-400 uppercase tracking-widest">
                                             suggested queries
                                         </p>
                                         {SUGGESTED_QUESTIONS.map((q) => (
                                             <button
                                                 key={q}
                                                 onClick={() => sendMessage(q)}
-                                                className="w-full text-left text-xs text-slate-400 border border-slate-800 px-3 py-2 hover:border-blue-500/30 hover:text-blue-400 hover:bg-blue-500/5 transition-all font-mono"
+                                                className="w-full text-left text-sm text-slate-300 border border-slate-800 px-3 py-2 hover:border-blue-500/30 hover:text-blue-400 hover:bg-blue-500/5 transition-all font-mono"
                                             >
                                                 {'>'} {q}
                                             </button>
@@ -159,12 +159,12 @@ export default function AgentChat() {
 
                             {messages.map((msg, i) => (
                                 <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                                    <div className={`max-w-[85%] text-sm leading-relaxed ${msg.role === 'user'
+                                    <div className={`max-w-[85%] text-md leading-relaxed ${msg.role === 'user'
                                         ? 'bg-blue-500/10 border border-blue-500/20 text-blue-100 px-3 py-2 font-mono text-[11px]'
                                         : 'text-slate-300'
                                         }`}>
                                         {msg.role === 'assistant' && (
-                                            <span className="font-mono text-[9px] text-slate-600 uppercase tracking-widest block mb-1">
+                                            <span className="font-mono text-[11px] text-slate-400 uppercase tracking-widest block mb-1">
                                                 juan_agent →
                                             </span>
                                         )}
@@ -176,8 +176,8 @@ export default function AgentChat() {
                             {/* Streaming */}
                             {streamingContent && (
                                 <div className="flex justify-start">
-                                    <div className="max-w-[85%] text-sm leading-relaxed text-slate-300">
-                                        <span className="font-mono text-[9px] text-slate-600 uppercase tracking-widest block mb-1">
+                                    <div className="max-w-[85%] text-md leading-relaxed text-slate-300">
+                                        <span className="font-mono text-[10px] text-slate-600 uppercase tracking-widest block mb-1">
                                             juan_agent →
                                         </span>
                                         {streamingContent}
@@ -209,7 +209,7 @@ export default function AgentChat() {
                                     onChange={(e) => setInput(e.target.value)}
                                     onKeyDown={handleKeyDown}
                                     placeholder="Ask about skills, projects, experience..."
-                                    className="flex-1 bg-transparent text-slate-300 text-xs font-mono outline-none placeholder:text-slate-700"
+                                    className="flex-1 bg-transparent text-slate-300 text-xs font-mono outline-none"
                                     disabled={isLoading}
                                 />
                                 <button
