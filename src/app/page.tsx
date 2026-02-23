@@ -11,6 +11,7 @@ import PillarDrawer from '@/components/PilarDrawer';
 import ArchitectureLog from '@/components/ArchitectureLog';
 import ContactSection from '@/components/ContactSection';
 import NavBar from '@/components/NavBar';
+import AgentChat from '@/components/AgentChat';
 
 export default function PortfolioDashboard() {
 const [selectedSkill, setSelectedSkill] = useState<any | null>(null);
@@ -199,3 +200,5 @@ return (
   </main>
 );
 }
+
+<AgentChat />
