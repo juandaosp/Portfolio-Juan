@@ -98,7 +98,7 @@ export default function AgentChat() {
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.8 }}
                         onClick={() => setIsOpen(true)}
-                        className="fixed bottom-6 right-6 z-[9998] flex items-center gap-2 bg-[#0a0a0a] border border-blue-500/40 text-blue-400 px-4 py-3 font-mono text-[11px] uppercase tracking-widest hover:border-blue-500 hover:bg-blue-500/5 transition-all shadow-2xl shadow-blue-500/10"
+                        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9998] flex items-center gap-2 bg-[#0a0a0a] border border-blue-500/40 text-blue-400 px-3 py-2 sm:px-4 sm:py-3 font-mono text-[10px] sm:text-[11px] uppercase tracking-widest hover:border-blue-500 hover:bg-blue-500/5 transition-all shadow-2xl shadow-blue-500/10"
                     >
                         <span className="relative flex h-2 w-2">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
@@ -118,10 +118,10 @@ export default function AgentChat() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 20, scale: 0.95 }}
                         transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-                        className="fixed bottom-6 right-6 z-[9998] w-[380px] max-w-[calc(100vw-2rem)] h-[520px] bg-[#0a0a0a] border border-slate-800 shadow-2xl flex flex-col overflow-hidden"
+                        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9998] w-[calc(100vw-2rem)] sm:w-[380px] max-w-[380px] h-[480px] sm:h-[520px] bg-[#0a0a0a] border border-slate-800 shadow-2xl flex flex-col overflow-hidden"
                     >
                         {/* Header */}
-                        <div className="Agent-Chat-Header flex items-center justify-between px-4 py-3 border-b border-slate-800 bg-[#0d0d0d] shrink-0">
+                        <div className="flex items-center justify-between px-4 py-3 border-b border-slate-800 bg-[#0d0d0d] shrink-0">
                             <div className="flex items-center gap-2">
                                 <div className="flex gap-1">
                                     <div className="w-2 h-2 rounded-full bg-red-500/40" />
