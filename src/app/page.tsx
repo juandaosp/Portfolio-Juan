@@ -197,8 +197,7 @@ return (
         />
       )}
     </AnimatePresence>
+    <AgentChat />
   </main>
 );
 }
-
-<AgentChat />

@@ -121,7 +121,7 @@ export default function AgentChat() {
                         className="fixed bottom-6 right-6 z-[9998] w-[380px] max-w-[calc(100vw-2rem)] h-[520px] bg-[#0a0a0a] border border-slate-800 shadow-2xl flex flex-col overflow-hidden"
                     >
                         {/* Header */}
-                        <div className="flex items-center justify-between px-4 py-3 border-b border-slate-800 bg-[#0d0d0d] shrink-0">
+                        <div className="Agent-Chat-Header flex items-center justify-between px-4 py-3 border-b border-slate-800 bg-[#0d0d0d] shrink-0">
                             <div className="flex items-center gap-2">
                                 <div className="flex gap-1">
                                     <div className="w-2 h-2 rounded-full bg-red-500/40" />
